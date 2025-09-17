@@ -1,8 +1,12 @@
 import express from 'express';
 const app = express();
-import { prismaClient } from "store/client";
+import { prismaClient } from "store";
 app.use(express.json())
-app.post("/website",async (req,res)=>{
+app.post("/website", async (req,res) => {
+    if(!req.body.url){
+        res.status(411).json({ error: "Missing URL in request body" })
+        return;
+    }
     const website = await prismaClient.website.create({
         data:{
             url: req.body.url,

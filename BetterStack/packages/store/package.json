@@ -7,9 +7,10 @@
     "@types/bun": "latest"
   },
   "exports": {
-    "./client": "./index.ts"
+    ".": "./index.ts"
   },
   "main": "./index.ts",
+  "types": "./index.ts",
   "peerDependencies": {
     "typescript": "^5"
   },
