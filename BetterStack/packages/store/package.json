@@ -9,6 +9,7 @@
   "exports": {
     "./client": "./index.ts"
   },
+  "main": "./index.ts",
   "peerDependencies": {
     "typescript": "^5"
   },
